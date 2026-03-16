@@ -1,0 +1,520 @@
+@charset "utf-8";
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: rgb(244, 255, 253);
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #000;
+}
+
+/* ハンバーガーボタン */
+#hum_back {
+    background-color: #86ac41;
+    padding: 10px 10px 5px 10px;
+}
+
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    background-color: #86ac41;
+    z-index: 1000;
+}
+
+.hamburger span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    transition: 0.3s;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 18px;
+}
+
+/* メニュー */
+nav {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #86ac41;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    border-bottom: 1px solid #5f883b;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #5f883b;
+    color: #fff;
+}
+
+/* 開いた状態 */
+nav.active {
+    right: 0;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+}
+
+#photo {
+    width: 100%;
+    transition: opacity 1s ease;
+}
+
+header img {
+    width: 40px;
+}
+
+.wdxl-lubrifont-jp-n-regular {
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin-left: 10px;
+}
+.yusei-magic-regular {
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+
+header a {
+    color: #000;
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+.footerimg {
+    position: relative;
+}
+
+.footerimg img {
+    width: 100%;
+    min-height: 250px;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+/*↓ホームここから↓*/
+#main_home h2,
+#main_home p {
+    text-align: center;
+}
+
+#main_home {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#main_home h2 {
+    margin-top: 150px;
+}
+
+#timenews {
+    margin-bottom: 60px;
+}
+
+
+#news #timenews li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    border-bottom: 1px solid #888;
+
+}
+
+#news #timenews li time {
+    width: 200px;
+    color: #86ac41;
+    font-weight: bold;
+}
+
+#news a {
+    color: rgb(1, 1, 105);
+    margin-top: 10px;
+}
+
+#imgnews img {
+    width: 200px;
+}
+
+#imgnews a {
+    position: relative;
+    display: inline-block;
+}
+
+#imgnews a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(78, 78, 78, 0.534);
+    opacity: 0;
+}
+
+#imgnews a:hover::after {
+    opacity: 1;
+}
+
+#news #imgnews {
+    display: block;
+}
+
+#imgnews li {
+    list-style-type: none;
+    width: 200px;
+    margin: 0 auto;
+}
+
+#imgnews p {
+    font-size: 13px;
+    width: 200px;
+}
+
+.detail {
+    font-size: 16px;
+    color: #5f883b;
+}
+
+#prohibited {
+    margin-bottom: 80px;
+}
+
+#prohibited p,
+#permission p {
+    border-bottom: #86ac41 solid 2px;
+    padding: 0 0 5px 0;
+}
+
+#caution li {
+    list-style-type: circle;
+}
+
+#cooperation {
+    color: rgb(223, 84, 3);
+    margin: 50px 0;
+}
+
+#kousikiaka {
+    width: 300px;
+    margin: 0 auto;
+}
+/*↑ホームここまで↑*/
+
+/*↓施設紹介ここから↓*/
+#sub_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#column {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 5px 10px 5px;
+    margin: 0 auto;
+}
+
+#column figure img {
+    width: 500px;
+}
+
+#column figure a {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+#column figure a img {
+    display: block;
+}
+
+#column figure a figcaption {
+    display: block;
+    transition: all .3s;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+#column figure a:hover figcaption {
+    opacity: 1;
+}
+
+#column figure a figcaption p {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+}
+
+#intro_img {
+    margin-top: 50px;
+    height: 100%;
+}
+
+#shosai {
+    display: flex;
+}
+
+#shosai img {
+    margin: 0;
+    height: 100%;
+}
+
+#shosaibun {
+    word-break: break-all;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    #column {
+        width: 500px;
+        display: block;
+        margin: 10px;
+    }
+
+    #column figure img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #intro_img {
+        width: 100%;
+    }
+
+    #shosai {
+        display: block;
+    }
+
+}
+/*↑施設紹介ここまで↑*/
+
+/* アクセスここから */
+#access {
+    text-align: center;
+    line-height: 1.7;
+}
+
+#access_main {
+    margin: 50px 0 50px 0;
+}
+
+access_sub {
+    display: block;
+    text-align: center;
+}
+
+#access_picture img {
+    width: 100%;
+}
+
+#access_sabmain {
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+#map {
+    margin: 40px 0 40px 0;
+}
+
+#access_submain {
+    margin: 40px 0 40px 0;
+    border-bottom: solid 1px #5f883b;
+    border-top: solid 1px #5f883b;
+    width: 100%;
+    padding-bottom:20px;
+}
+
+#map iframe {
+    width: 100%;
+}
+
+.gmap_iframe {
+    aspect-ratio: 16 / 9;
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+}
+
+#access_footer {
+    background-color: #3d7e3d;
+}
+
+/* アクセスここまで */
+/*↓お問い合わせここから↓*/
+#setumei {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.redcolor {
+    color: red;
+    font-size: 10px;
+}
+
+.greencolor {
+    color: green;
+    font-size: 10px;
+}
+
+#formcontact {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#btn {
+    text-align: center;
+    margin: 50px 0;
+}
+
+#send {
+    background-color: rgb(255, 136, 0);
+    padding: 10px 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.smallmesse {
+    font-size: 10px;
+}
+
+#main_contactend p {
+    text-align: center;
+}
+/*↑お問い合わせここまで↑*/
+
+
+
+/* PC表示では常に表示 */
+@media (min-width: 768px) {
+    body {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    #hum_back {
+        background-color: #fff;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        padding-top: 0;
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        border: none;
+    }
+
+    nav ul li a {
+        padding: 10px 15px;
+        color: #000;
+    }
+
+    #news #imgnews {
+        display: flex;
+    }
+
+    #imgnews li {
+        width: calc(800px/3);
+        margin-left: 25px;
+    }
+
+    #news #timenews li {
+        flex-direction: row;
+    }
+
+    #news a {
+        margin: 0;
+    }
+
+}
