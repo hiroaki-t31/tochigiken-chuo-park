@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | 栃木県中央公園</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/icon.ico">
+
+</head>
+<body>
+    <header>
+        <div id="headname"><a href="index.html">
+                <img src="images/icon.png">
+                <span class="wdxl-lubrifont-jp-n-regular">栃木県中央公園</span>
+            </a></div>
+        <div id="hum_back">
+        <div class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </div>
+        <nav id="nav">
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="facility.html">施設紹介</a></li>
+            <li><a href="access.html">アクセス</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+    </header>
+    <div id="main_contact">
+        <img src="images/head_toiawase.jpg" width="100%">
+        <p id="setumei">当公園へのお問い合せ・ご質問・ご意見などございましたら、以下のメールフォームより送信してください。<br>
+           お電話でのご連絡は、【028-636-1491】までお願いいたします。</p>
+        <div id="formcontact">
+            <form>
+                <label>
+                    <p>お名前<span class="redcolor">（必須）</span><br><input type="text" id="name" size="30"><br><span id="mess_name" class="smallmesse"></span></p>
+                </label>
+                <label>
+                    <p>ふりがな<span class="redcolor">（必須）</span><br><input type="text" id="hiragana" size="30"><br><span id="mess_hiragana" class="smallmesse"></span></p>
+                </label>
+                <label>
+                    <p>メールアドレス<span class="redcolor">（必須）</span><br><input type="email" id="mail" size="50"><br><span id="mess_mail" class="smallmesse"></span></p>
+                </label>
+                <label>
+                    <p>郵便番号<span class="greencolor">（任意）</span><br><input type="text" id="number"></p>
+                </label>
+                <label>
+                    <p>住所<span class="greencolor">（任意）</span><br><input type="text" id="jusyo" size="40"></p>
+                </label>
+                <label>
+                    <p>お問い合わせ内容<span class="redcolor">（必須）</span><br><textarea rows="10" cols="60" id="naiyo"></textarea><br><span id="mess_naiyo" class="smallmesse"></span></p>
+                </label>
+                <label><input type="checkbox" value="doi" id="doi">個人情報の取り扱いについて同意する<br><span id="mess_doi" class="smallmesse"></span></label>
+            </form>
+            <p id="btn"><button id="send">送信する</button></p>
+        </div>
+    </div>
+    <footer>
+            <div class="footerimg">
+                <img src="images/241_F_703177976_xSLXySIV87rSipQUIza6wwL4UbiirDkq.jpg">
+            <div class="overlay">
+            <h1 class="wdxl-lubrifont-jp-n-regular">栃木県中央公園</h1>
+            <p>〒320-0865<br>
+                栃木県宇都宮市睦町2-50</p>
+            <p>TEL:028-636-1491</p>
+            </div>
+            </div>
+        </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
